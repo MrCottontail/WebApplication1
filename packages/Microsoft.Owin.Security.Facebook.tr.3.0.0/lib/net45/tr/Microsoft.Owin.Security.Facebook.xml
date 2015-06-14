@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security.Facebook</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext">
+      <summary>Facebook ile doğrulanan kimlik bilgilerine erişim sağlar.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.#ctor(Microsoft.Owin.IOwinContext,Newtonsoft.Json.Linq.JObject,System.String,System.String)"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.AccessToken">
+      <summary>Erişim belirtecini alır veya ayarlar.</summary>
+      <returns>Erişim belirteci.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Email">
+      <summary>Facebook'a erişmek için kullanılan e-postayı alır veya ayarlar.</summary>
+      <returns>Facebook'a erişmek için kullanılan e-posta.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.ExpiresIn"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Id">
+      <summary>Bağlamla ilişkili tanımlayıcıyı alır veya ayarlar.</summary>
+      <returns>Bağlamla ilişkili tanımlayıcı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Identity">
+      <summary>Bu örneğin kimliğini alır veya ayarlar.</summary>
+      <returns>Bu örneğin kimliği.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Link">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext" /> bağlantısını alır veya ayarlar.</summary>
+      <returns>
+        <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext" /> bağlantısı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Name">
+      <summary>Bağlamla ilişkili adı alır veya ayarlar.</summary>
+      <returns>Bağlamla ilişkili ad.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.Properties"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.User">
+      <summary>Kimlik doğrulamasına erişen kullanıcıyı alır veya ayarlar.</summary>
+      <returns>Kimlik doğrulamasına erişen kullanıcı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext.UserName"></member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware">
+      <summary>Facebook kimlik doğrulaması ara yazılımını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions)">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware" /> sınıfının yeni bir örneğini başlatır.</summary>
+      <param name="next">Sonraki uygulamaya ilerler.</param>
+      <param name="app">Uygulama.</param>
+      <param name="options">Facebook kimlik doğrulaması seçenekleri.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationMiddleware.CreateHandler">
+      <summary>Bir kimlik doğrulama işleyicisi oluşturur.</summary>
+      <returns>Bir kimlik doğrulama işleyicisi.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions">
+      <summary>Facebook kimlik doğrulaması seçeneklerini sağlar.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.#ctor">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions" /> sınıfının yeni bir örneğini başlatır.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.AppId">
+      <summary>Uygulama tanımlayıcısını alır veya ayarlar.</summary>
+      <returns>Uygulama tanımlayıcısı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.AppSecret">
+      <summary>Uygulama gizli anahtarını alır veya ayarlar.</summary>
+      <returns>Uygulama gizli anahtarı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.BackchannelCertificateValidator"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.BackchannelHttpHandler"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.BackchannelTimeout"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.CallbackPath"></member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.Caption">
+      <summary>Uygulamada gösterilen metin açıklamalı alt yazısını alır veya ayarlar.</summary>
+      <returns>Uygulamada gösterilen metin açıklamalı alt yazısı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.Provider">
+      <summary>Kimlik doğrulama sağlayıcısını alır veya ayarlar.</summary>
+      <returns>Kimlik doğrulama sağlayıcısı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.Scope">
+      <summary>Kimlik doğrulaması ile ilişkili kapsamı alır veya ayarlar.</summary>
+      <returns>Kimlik doğrulaması ile ilişkili kapsam.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.SignInAsAuthenticationType">
+      <summary>Oturum açmak için kimlik doğrulaması türünü temsil eden bir dize alır veya ayarlar.</summary>
+      <returns>Oturum açmak için kimlik doğrulaması türünü temsil eden bir dize.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions.StateDataFormat"></member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider">
+      <summary>Facebook kimlik doğrulama sağlayıcısını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.#ctor">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider" /> sınıfının yeni bir örneğini başlatır.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext)">
+      <summary>Facebook kimlik doğrulamasının yapıldığını belirtir.</summary>
+      <returns>Kimlik doğrulamasını tamamlayan görev.</returns>
+      <param name="context">Bağlam.</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.OnAuthenticated">
+      <summary>OnAuthenticated olayını alır veya ayarlar.</summary>
+      <returns>OnAuthenticated olayı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.OnReturnEndpoint">
+      <summary>OnReturnEndpoint olayını alır veya ayarlar.</summary>
+      <returns>OnReturnEndpoint olayı.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext)">
+      <summary>Facebook son noktasını döndürür.</summary>
+      <returns>Son noktayı döndürme işlemini tamamlayan görev.</returns>
+      <param name="context">Bağlam.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext">
+      <summary>Facebook özellikleri için dönüş son noktası bağlamını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="T:Microsoft.Owin.Security.Facebook.IFacebookAuthenticationProvider">
+      <summary>Kimlik doğrulaması için Facebook bağlamı sağlar.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.IFacebookAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext)">
+      <summary>Kimliği doğrulanmış bağlamı tanımlar.</summary>
+      <returns>Kimliği doğrulanmış bağlam.</returns>
+      <param name="context">Kimliği doğrulanacak bağlam.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Facebook.IFacebookAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Facebook.FacebookReturnEndpointContext)">
+      <summary>Facebook son nokta bağlamını döndürür.</summary>
+      <returns>Facebook son nokta bağlamı.</returns>
+      <param name="context">Son nokta bağlamı.</param>
+    </member>
+    <member name="T:Owin.FacebookAuthenticationExtensions">
+      <summary>Facebook kimlik doğrulaması için genişletme yöntemleri sağlar.</summary>
+    </member>
+    <member name="M:Owin.FacebookAuthenticationExtensions.UseFacebookAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions)">
+      <summary>OWIN uygulaması için bir Facebook kimlik doğrulaması oluşturur.</summary>
+      <returns>Kimlik doğrulamasını oluşturan <see cref="T:Owin.IAppBuilder" />.</returns>
+      <param name="app">Uygulama oluşturucu.</param>
+      <param name="options">Facebook kimlik doğrulama seçenekleri.</param>
+    </member>
+    <member name="M:Owin.FacebookAuthenticationExtensions.UseFacebookAuthentication(Owin.IAppBuilder,System.String,System.String)">
+      <summary>OWIN uygulaması için bir Facebook kimlik doğrulaması oluşturur.</summary>
+      <returns>Kimlik doğrulamasını oluşturan <see cref="T:Owin.IAppBuilder" />.</returns>
+      <param name="app">Uygulama oluşturucu.</param>
+      <param name="appId">Uygulama kimliği.</param>
+      <param name="appSecret">Uygulama gizli anahtarı.</param>
+    </member>
+  </members>
+</doc>

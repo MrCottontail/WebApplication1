@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security.Google</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext">
+      <summary>Google kimlik doğrulama bağlamını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.#ctor(Microsoft.Owin.IOwinContext,System.Security.Claims.ClaimsIdentity,Microsoft.Owin.Security.AuthenticationProperties,System.Xml.Linq.XElement,System.Collections.Generic.IDictionary{System.String,System.String})"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.AttributeExchangeProperties">
+      <summary>Öznitelik değişim bağlamının özelliklerini alır veya ayarlar.</summary>
+      <returns>Öznitelik değişim bağlamının özellikleri.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.Identity">
+      <summary>Bağlamla ilişkili talep kimliğini alır veya ayarlar.</summary>
+      <returns>Bağlamla ilişkili talep kimliği.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.Properties"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticatedContext.ResponseMessage">
+      <summary>Kimlik doğrulamasının yanıt iletisini alır veya ayarlar.</summary>
+      <returns>Kimlik doğrulamasının yanıt iletisi.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware">
+      <summary>Google kimlik doğrulama ara yazılımını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.Google.GoogleAuthenticationOptions)">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware" /> sınıfının yeni bir örneğini başlatır.</summary>
+      <param name="next">Kimliği doğrulanacak sonraki uygulama.</param>
+      <param name="app">Uygulama oluşturucu.</param>
+      <param name="options">Kimlik doğrulaması seçenekleri.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationMiddleware.CreateHandler">
+      <summary>Bu ara yazılım için bir kimlik doğrulaması işleyici oluşturur.</summary>
+      <returns>Oluşturulan <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler`1" />.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions">
+      <summary>Google kimlik doğrulama seçeneklerini temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.#ctor">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions" /> sınıfının yeni bir örneğini başlatır.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.BackchannelCertificateValidator"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.BackchannelHttpHandler"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.BackchannelTimeout"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.CallbackPath"></member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.Caption">
+      <summary>Kimlik doğrulaması için kullanılan açıklamalı alt yazıyı alır veya ayarlar.</summary>
+      <returns>Kimlik doğrulaması için kullanılan açıklamalı alt yazı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.Provider">
+      <summary>Google kimlik doğrulama sağlayıcısını alır veya ayarlar.</summary>
+      <returns>Google kimlik doğrulama sağlayıcısı.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.SignInAsAuthenticationType">
+      <summary>Google oturumunu açarken kullanılan kimlik doğrulaması türünü alır veya ayarlar.</summary>
+      <returns>Google oturumunu açarken kullanılan kimlik doğrulaması türü.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationOptions.StateDataFormat"></member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider">
+      <summary>Google kimlik doğrulama sağlayıcısını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.#ctor">
+      <summary>
+        <see cref="T:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider" /> sınıfının yeni bir örneğini başlatır.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Google.GoogleAuthenticatedContext)">
+      <summary>Belirtilen kimlik doğrulaması bağlamını gösterir.</summary>
+      <returns>Bağlamın kimliğini doğrulama işlemini temsil eden görev.</returns>
+      <param name="context">Google kimlik doğrulaması bağlamı.</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.OnAuthenticated">
+      <summary>Authenticated olayını çağıran işlevi alır veya ayarlar.</summary>
+      <returns>Authenticated olayını çağıran işlev.</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.OnReturnEndpoint">
+      <summary>ReturnEndpoint olayını çağıran işlevi alır veya ayarlar.</summary>
+      <returns>ReturnEndpoint olayını çağıran işlev.</returns>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Google.GoogleReturnEndpointContext)">
+      <summary>Belirtilen dönüş son noktası bağlamını gösterir.</summary>
+      <returns>Dönüş son noktasını işleyen görev.</returns>
+      <param name="context">Google dönüş son noktası bağlamı.</param>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Google.GoogleReturnEndpointContext">
+      <summary>Google dönüş son noktası bağlamını temsil eder.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.GoogleReturnEndpointContext.#ctor(Microsoft.Owin.IOwinContext,Microsoft.Owin.Security.AuthenticationTicket)"></member>
+    <member name="T:Microsoft.Owin.Security.Google.IGoogleAuthenticationProvider">
+      <summary>Google kimlik doğrulama sağlayıcısı için arabirim sağlar.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.IGoogleAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Google.GoogleAuthenticatedContext)">
+      <summary>Belirtilen kimlik doğrulaması bağlamını gösterir.</summary>
+      <returns>Bağlamın kimliğini doğrulama işlemini temsil eden görev.</returns>
+      <param name="context">Google kimlik doğrulaması bağlamı.</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Google.IGoogleAuthenticationProvider.ReturnEndpoint(Microsoft.Owin.Security.Google.GoogleReturnEndpointContext)">
+      <summary>Belirtilen dönüş son noktası bağlamını gösterir.</summary>
+      <returns>Dönüş son noktasını işleyen görev.</returns>
+      <param name="context">Google dönüş son noktası bağlamı.</param>
+    </member>
+    <member name="T:Owin.GoogleAuthenticationExtensions">
+      <summary>Google kimlik doğrulaması için genişletme yöntemlerini temsil eder.</summary>
+    </member>
+    <member name="M:Owin.GoogleAuthenticationExtensions.UseGoogleAuthentication(Owin.IAppBuilder)">
+      <summary>Ara yazılım Google kimlik doğrulamasını kullandıktan sonra çağrılır.</summary>
+      <returns>Google kimlik doğrulaması.</returns>
+      <param name="app">Uygulama oluşturucu.</param>
+    </member>
+    <member name="M:Owin.GoogleAuthenticationExtensions.UseGoogleAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.Google.GoogleAuthenticationOptions)">
+      <summary>Ara yazılım Google kimlik doğrulamasını kullandıktan sonra çağrılır.</summary>
+      <returns>Google kimlik doğrulaması.</returns>
+      <param name="app">Uygulama oluşturucu.</param>
+      <param name="options">Google kimlik doğrulama seçenekleri.</param>
+    </member>
+  </members>
+</doc>

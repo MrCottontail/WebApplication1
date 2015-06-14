@@ -136,7 +136,7 @@ namespace WebApplication1.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+       /* [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -171,7 +171,7 @@ namespace WebApplication1.Controllers
             // İşlemde bu kadar ilerlendiyse, hata oluşmuş demektir, formu yeniden görüntüleyin
             return View(model);
         }
-
+        */
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
